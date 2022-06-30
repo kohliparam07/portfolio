@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="contact.css">
+    <script src="https://kit.fontawesome.com/48c39833d3.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="page_transitions.css">
+</head>
+<body>
+    <div class="transition transition-2 is-active"></div>
+    <header>
+        <div class="topnav">
+            <h1>Parambir Singh Kohli</h1>
+            <div class="topnavLinks">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="#" class="isactive">Contact</a>
+            </div>
+            <div class="menu" id="menu">
+                <div class="nav"></div>
+                <div class="nav"></div>
+                <div class="nav"></div>
+            </div>
+            <div class="mobileMenuBg" id="mobileMenuBg">
+                <div class="topnavLinksMobile" id="topnavLinksMobile">
+                    <a href="index.html">Home</a><br>
+                    <a href="about.html">About</a><br>
+                    <a href="projects.html">Projects</a><br>
+                    <a href="#" class="isactive">Contact</a><br>
+                </div>
+            </div>
+        </div>
+    </header>
+    <br><br><br><br><br>
+    <section>
+        <div class="maindiv">
+            <h3>CONTACT <div class="underline"></div> </h3>
+            <h1 id="heading1">CONTACT ME</h1>
+            <div class="contactText">
+                <div class="contactCard">
+                    <div class="contactCardIcon"><i class="fas fa-map-marker-alt cont"></i></div>
+                    <div class="contactCardInner" id="addressBox">
+                        <h3>My Address</h3>
+                        <span>5031-A,&nbsp;&nbsp;Street &nbsp;no. 1 &nbsp;S. W. Road, &nbsp;Amritsar, &nbsp;Punjab, &nbsp;India, &nbsp;143001</span>
+                    </div>
+                </div>
+                <div class="contactCard">
+                    <div class="contactCardIcon"><i class="fas fa-share-alt cont"></i></div>
+                    <div class="contactCardInner" id="socialBox">
+                        <h3>Social Profiles</h3>
+                        <span>
+                            <a href="https://www.linkedin.com/feed/"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                            <a href=""><i class="fab fa-facebook"></i></a>
+                            <a href=""><i class="fab fa-twitter"></i></a>
+                            <a href=""><i class="fab fa-github"></i></a>
+                        </span>
+                    </div>
+                </div>
+                <div class="contactCard">
+                    <div class="contactCardIcon"><i class="far fa-envelope cont"></i></div>
+                    <div class="contactCardInner" id="mailBox">
+                        <h3>Email Me</h3>
+                        <span>singh.parambir07@gmail.com</span>
+                    </div>
+                </div>
+                <div class="contactCard">
+                    <div class="contactCardIcon"><i class="fas fa-phone-volume cont"></i></div>
+                    <div class="contactCardInner" id="callBox">
+                        <h3>Call Me</h3>
+                        <span>+91 85568 50535</span>
+                    </div>
+                </div>
+            </div>
+            <div class="contactForm">
+                <form action="mail.php" method="post" data-aos="slide-up" name="contact" data-netlify="true" data-netlify-recaptcha="true">
+                    <div class="nameBox">
+                        <input type="text" name="name" id="text" class="contactFormInput" placeholder="Your Name">
+                        <div id="errorName" class="err"><span>Kindly enter a valid name</span></div>
+                    </div>
+                    <div class="mailBox">
+                        <input type="email" name="mail" id="email" class="contactFormInput" placeholder="Your Email">
+                        <div id="errorMail" class="err"><span>Kindly enter a valid email</span></div>
+                    </div>
+                    <div class="subBox">
+                        <input type="text" name="sub" id="subject" class="contactFormInput" placeholder="Subject">
+                        <div id="errorSubject" class="err"><span>Kindly enter a valid Subject</span></div>
+                    </div>
+                    <div class="msgBox">
+                        <textarea name="msg" id="message" cols="30" rows="10" class="contactFormInput" placeholder="Message"></textarea>
+                        <div id="errorMessage" class="err"><span>Kindly enter a valid message</span></div>
+                    </div>
+                    <button type="submit" id="subBtn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 0, // offset (in px) from the original trigger point
+            delay: 0, // values from 0 to 3000, with step 50ms
+            duration: 600, // values from 0 to 3000, with step 50ms
+            easing: 'ease', // default easing for AOS animations
+            once: true, // whether animation should happen only once - while scrolling down
+            mirror: true, // whether elements should animate out while scrolling past them
+            anchorPlacement: 'top-centre',
+        });
+    </script>
+
+    <script src="contact.js"></script>
+    <script src="page_transitions.js"></script>
+</body>
+</html>

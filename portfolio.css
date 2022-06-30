@@ -1,0 +1,342 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    /* background-color: rgba(1, 18, 38, 1); */
+    background-color: #1b2430;
+}
+header{
+    display: grid;
+    /* background-color: rgba(3, 7, 8, 1); */
+    background-color: #0f171e;
+    grid-template-columns: 1fr 2fr;
+    width: 97vw;
+    height: 93vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Baloo Bhai 2', cursive;
+}
+.rightHeader{
+    background: whitesmoke;
+    width: 70vw;
+    height: 100%;
+    float: right;
+}
+.rightHeaderImage, .rightHeaderImage2{
+    width: 96%;
+    height: 94%;
+    /* border: 2px solid; */
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.rightHeaderImage2{
+    background: rgba(0, 0, 0, 0.486);
+}
+.rightHeaderImageText{
+    z-index: 2;
+    color: white;
+    text-align: center;
+    /* border: 2px solid; */
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 650px;
+    
+}
+.rightHeaderImageText h1{
+    font-size: 4rem;
+}
+.rightHeaderImageText h2{
+    font-size: 1.5rem;
+    /* code for text typing animation  */
+    /* animation: type 6s steps(92) infinite alternate; */
+     /* overflow: hidden; */
+    /* removes word wrap */
+    /* white-space: nowrap;  */
+    /* width: 52ch; */
+    /* border-right: 4px solid white; */
+    /* margin-bottom: 5px; */
+}
+/* @keyframes type{
+    0%{
+        width: 0ch;
+    }
+    100%{
+        width: 52ch;
+    }
+} */
+.animate{
+    color: rgb(0, 255, 170);
+}
+.rightHeaderImage::before{
+    background: url("images/landing2.webp");
+    background-position: center;
+    background-size: cover;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* filter: blur(2px); */
+    z-index: -1;
+}
+.leftHeader{
+    /* border: 2px solid; */
+    width: 27vw;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 0.5fr 1fr 0.5fr;
+}
+.leftHeaderImage{
+    width: 150px;
+    height: 150px;
+    /* border: 5px double black; */
+    align-self: center;
+    border-radius: 50%;
+    background: url("images/self.jpeg");
+    background-position: top;
+    background-size: contain;
+    margin-top: 20px;
+    justify-self: center;
+}
+.leftHeaderText{
+    color: white; 
+    display: block;
+    text-align: center;
+    align-self: center;
+    /* visibility: hidden; */
+    /* color: #1b2430; */
+}
+.leftHeaderMenu{
+    /* border: 2px solid; */
+    align-self: center;
+}
+.leftHeaderMenu a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 4px 0 4px 0;
+}
+.leftHeaderMenu a:hover{
+    background: rgb(0, 255, 170);
+    /* color: rgba(3, 7, 8, 1); */
+    color: #0f171e;
+}
+.leftHeaderMenu .isactive{
+    background-color: rgb(0, 255, 170);
+    color: #0f171e;
+}
+.fas{
+    margin: 0 20px 0 30px;
+}
+.fab{
+    margin-right: 10px;
+}
+.leftHeaderIcons{
+    color: white;
+    display: block;
+    text-align: center;
+    /* border: 2px solid salmon; */
+    align-self: center;
+}
+.leftHeaderIcons a{
+    color: white;
+}
+.fab:hover{
+    transition: 0.2s;
+    transform: scale(1.5);
+}
+.leftHeaderIcons a:hover{
+    cursor: pointer;
+}
+.leftHeaderIconsMobile{
+    color: white;
+    display: block;
+    text-align: center;
+    /* border: 2px solid salmon; */
+    position: fixed;
+    bottom: 2%;
+    left: 8%;
+}
+.nav{
+    width: 35px;
+    height: 6px;
+    background: rgb(0, 255, 170);
+    margin-bottom: 6px;
+    z-index: 21;
+    position: relative;
+    display: none;
+}
+.leftHeaderMobile{
+    width: 0%;
+    height: 100%;
+    /* background: rgba(3,7,8,1); */
+    background: #0f171e;
+    /* background: pink; */
+    position: fixed;
+    z-index: 10;
+    top: -0.5px;
+    left: -1px;
+    transition: all .5s;
+    display: none;
+    overflow-x: hidden
+    /* opacity: 0; */
+    /* visibility: hidden; */
+}
+.leftHeaderMobileShow{
+    width: 60%;
+    /* height: 100%; */
+    /* opacity: 1;
+    visibility: visible; */
+}
+.leftHeaderMobileText{
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    z-index: 20;
+    /* visibility: hidden; */
+    grid-template-rows: 1fr 0.5fr 1fr 0.5fr;
+    display: none;
+    height: 100%;
+    overflow-x: hidden;
+    white-space: nowrap;
+    transition: 0.5s;
+}
+.leftHeaderMobileTextShow{
+    /* visibility: visible; */
+    font-size: 0.1rem;
+    /* color: pink; */
+    /* color: white; */
+}
+#myhead{
+    color: white;
+}
+@media (max-width: 800px){
+    body{
+        background-color: rgb(3 7 8);
+    }
+    header{
+        display: block;
+    }
+    .rightHeader{
+        position: absolute;
+        width: 100%;
+        float: none;
+        background-color: rgb(3 7 8);
+    }
+    .rightHeaderImage2{
+        width: 100%;
+        height: 100%;
+    }
+    .leftHeader{
+        display: none;
+    }
+    .nav, .leftHeaderMobile {
+        display: block;
+    }
+    .leftHeaderMobileText{
+        display: grid;
+    }
+    .leftHeaderImage{
+        width: 200px;
+        height: 200px;
+    }
+    .leftHeaderText h1{
+        font-size: 2.3rem;
+    }
+    .leftHeaderText h3{
+        font-size: 1.8rem;
+    }
+    .leftHeaderMenu{
+        font-size: 1.7rem;
+    }
+    .leftHeaderIconsMobile{
+        font-size: 1.6rem;
+    }
+}
+@media(orientation: landscape) and (max-width: 800px){
+    body{
+        background-color: rgb(3 7 8);
+    }
+    header{
+        display: block;
+    }
+    .rightHeader{
+        position: absolute;
+        width: 100%;
+        float: none;
+        background-color: rgb(3 7 8);
+    }
+    .rightHeaderImage2{
+        width: 100%;
+        height: 100%;
+    }
+    .leftHeader{
+        display: none;
+    }
+    .nav, .leftHeaderMobile {
+        display: block;
+    }
+    .leftHeaderMobileText{
+        display: grid;
+    }
+    .leftHeaderImage{
+        width: 90px;
+        height: 90px;
+    }
+    .leftHeaderText h1{
+        font-size: 1.3rem;
+    }
+    .leftHeaderText h3{
+        font-size: .8rem;
+    }
+    .leftHeaderMenu{
+        font-size: .7rem;
+    }
+    .leftHeaderIconsMobile{
+        font-size: .6rem;
+    }
+}
+@media(max-width: 450px){
+    .rightHeaderImageText h1{
+        font-size: 1.7rem;
+    }
+    .rightHeader{
+        /* border: 2px solid white; */
+        overflow: hidden;
+    }
+    .rightHeaderImage{
+        position: absolute;
+    }
+    .rightHeaderImage2{
+        position: absolute;
+    }
+    .leftHeaderText h1{
+        font-size: 1.7rem;
+    }
+    .leftHeaderMobileShow{
+        width: 100%;
+    }
+    .leftHeaderMobileText{
+        width: 100%;
+    }
+    .leftHeaderText h3{
+        font-size: 1.2rem;
+    }
+    .leftHeaderMenu{
+        font-size: 1.2rem;
+    }
+    .leftHeaderIcons{
+        font-size: 1.2rem;
+    }
+    .leftHeaderImage{
+        width: 100px;
+        height: 100px;
+    }
+}

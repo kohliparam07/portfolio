@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <script src="https://kit.fontawesome.com/48c39833d3.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- for typing animation  -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link rel="stylesheet" href="page_transitions.css">
+    
+</head>
+
+<body>
+    <div class="transition transition-2 is-active"></div>
+    <header>
+        <div class="leftHeader">
+            <div class="leftHeaderImage"></div>
+            <div class="leftHeaderText">
+                <h1>Parambir Singh Kohli</h1>
+                <h3>Front-End Developer</h3>
+            </div>
+            <div class="leftHeaderMenu">
+                <a href="#" class="isactive"><i class="fas fa-home"></i>Home</a>
+                <a href="about.html"><i class="fas fa-address-card"></i>About</a>
+                <a href="projects.html"><i class="fas fa-project-diagram"></i>Projects</a>
+                <a href="contact.html"><i class="fas fa-envelope"></i>Contact</a>
+            </div>
+            <div class="leftHeaderIcons">
+                <span>
+                    <i class="fab fa-linkedin"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-github"></i>
+                </span>
+            </div>
+        </div>
+        <div class="rightHeader">
+            <div class="rightHeaderImage">
+                <div class="rightHeaderImage2">
+                    <div class="menu" id="menu">
+                        <div class="nav" id="nav1"></div>
+                        <div class="nav" id="nav2"></div>
+                        <div class="nav" id="nav3"></div>
+                    </div>
+                    <div class="leftHeaderMobile" id="leftHeaderMobile"></div>
+                    <div class="leftHeaderMobileText" id="leftHeaderMobileText">
+                        <div class="leftHeaderImage"></div>
+                        <div class="leftHeaderText">
+                            <h1>Parambir Singh Kohli</h1>
+                            <h3>Front-End Developer</h3>
+                        </div>
+                        <div class="leftHeaderMenu">
+                            <a href="#" class="isactive"><i class="fas fa-home"></i>Home</a>
+                            <a href="about.html"><i class="fas fa-address-card"></i>About</a>
+                            <a href="projects.html"><i class="fas fa-project-diagram"></i>Projects</a>
+                            <a href="contact.html"><i class="fas fa-envelope"></i>Contact</a>
+                        </div>
+                        <div class="leftHeaderIcons">
+                            <span>
+                                <i class="fab fa-linkedin"></i>
+                                <i class="fab fa-instagram"></i>
+                                <i class="fab fa-facebook"></i>
+                                <i class="fab fa-twitter"></i>
+                                <i class="fab fa-github"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                    <div class="rightHeaderImageText">
+                        <h1>Hello !</h1><br>
+                        <h1>I'm a <span class="animate"></span></h1>
+                        <!-- <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, deserunt?</h2>
+                        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, deserunt?</h2>
+                        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, deserunt?</h2> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- for text animation -->
+    <script>
+        var typed = new Typed('.animate', {
+            strings: [
+                "Programmer",
+                "Developer",
+                "Photographer",
+                "Designer",
+            ],
+            typeSpeed: 100,
+            backSpeed: 100,
+            loop: true
+        });
+    </script>
+    <script src="portfolio.js"></script>
+    <script src="page_transitions.js"></script>
+
+</body>
+
+</html>

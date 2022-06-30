@@ -1,0 +1,472 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: url("images/landing2.webp");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+.topnav{
+    /* background: rgb(3, 7, 8); */
+    background: #1b2430;
+    color: white;
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    padding-left: 80px;
+    position: fixed;
+    z-index: 100;
+}
+.topnav h1{
+    display: inline;
+    font-weight: bold;
+    font-size: 2.7rem;
+}
+.topnavLinks a{
+    color: rgb(139, 139, 139);
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-left: 25px;
+    position: relative;
+}
+.topnavLinks a::after{
+    content: "";
+    position: absolute;
+    background-color: rgb(0, 255, 170);
+    height: 2px;
+    width: 0%;
+    left: 1px;
+    bottom: -3px;
+    transition: width 0.5s;  
+}
+.topnavLinks a:hover{
+    color: white; 
+}
+.topnavLinks .isactive{
+    color: white;
+    border-bottom: 2px solid rgb(0, 255, 170);
+}
+.topnavLinksMobile .isactive{
+    color: white;
+    /* border-bottom: 2px solid rgb(0, 255, 170); */
+}
+.topnavLinks a:hover::after, .isactive{
+    width: 100%;  
+}
+.topnavLinks{
+    float: right;
+    /* border: 2px solid; */
+    display: inline;
+    position: absolute;
+    top: 28%;
+    right: 6%;
+}
+.maindivHeading{
+    /* border: 2px solid; */
+    display: flow-root;
+}
+#resume{
+    /* border: 2px solid; */
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;
+    background: rgb(0, 255, 170);
+    float: right;
+    margin-top: -60px;
+}
+#resume:hover{
+    background: rgb(1, 192, 128);
+}
+section{
+    /* background: rgb(3, 7, 8); */
+    background: #0f171e;
+    width: 90%;
+    /* height: 800px; */
+    margin: auto;
+    margin-bottom: 50px;
+    /* position: relative; */
+    /* top: 25%;  */  
+}
+.maindivTextbox{
+    color: white;
+    font-size: 1.25rem;
+    padding: 30px;
+}
+#heading1{
+    font-size: 2.6rem;
+}
+.heading2{
+    font-size: 2.25rem;
+    color: rgb(0, 255, 170);
+}
+.maindivTextbox h3{
+    color: rgb(139, 139, 139);
+}
+.underline{
+    background: rgb(0, 255, 170);
+    width: 90px;
+    height: 2px;
+    display: inline-block;
+    margin-bottom: 7px;
+}
+.maindivTextboxInner{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 30px;
+    margin-top: 40px;
+}
+.maindivTextboxImage{
+    background: url("images/self2.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+}
+.maindivTextboxRight{
+    /* border: 2px solid; */
+    padding-top: 160px;
+}
+.maindivTextboxRight h1{
+    color: rgb(0, 255, 170);
+}
+.subtext{
+    display: grid;
+    /* border: 2px solid; */
+    grid-template-columns: 1fr 1fr;
+    margin-top: 40px;
+}
+.subtextLeft{
+    display: inline-block;
+}
+.subtextLeft li, .subtextRight li{
+    display: inline-block;
+    list-style: none;
+}
+.fas{
+    color: rgb(0, 255, 170);
+    margin-right: 10px;
+}
+.education{
+    /* border: 2px solid; */
+    margin-top: 40px;
+}
+.educationText{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.educationCard{
+    width: 350px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0px 15px 25px rgb(0 0 0 / 10%);
+    /* border-radius: 20px; */
+    border: 1px solid black;
+    padding: 20px;
+    align-items: center;
+    margin-bottom: 40px;
+    /* display: flex; */
+    /* border: 2px solid; */
+}
+.educationCard li{
+    list-style: none;
+}
+#edu, #int, #skl{
+    color: rgb(139, 139, 139);
+    margin-right: 20px;
+}
+#eduHead, #intHead{
+    color: rgb(139, 139, 139);
+}
+#underlineEdu{
+    width: 150px;
+}
+.educationCardIcon{
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    margin-top: -51px;
+    display: flex;
+    align-items: center;
+}
+.edu{
+    font-size: 2rem;
+    margin: auto;
+}
+.interests{
+    margin-top: 40px;
+}
+.interestText{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+.interestCards{
+    width: 250px;
+    height: 80px;
+    display: flex;
+    background: rgba(255, 255, 255, 0.08);
+    /* justify-content: center; */
+    padding-left: 45px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.intIcon{
+    font-size: 2rem;
+    margin-right: 20px;
+}
+#int1{
+    color: #b20969;
+}
+#int2{
+    color: #a6844c;
+}
+#int3{
+    color: #ff5828;
+}
+#int4{
+    color: cyan;
+}
+.skills{
+    /* border: 2px solid; */
+    margin-top: 40px;
+}
+.skillsText{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+}
+/* .skillbarProgress{
+    height: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    position: relative;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: progress 1s cubic-bezier(1,0,0.5,1) forwards;
+} */
+/* .skillbarProgress span{
+    background: rgb(0, 255, 170);
+    height: 10px;
+    width: 80%;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: progress 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+} */
+.skillbar{
+    width: 100%;
+    height: 18px;
+    background: rgba(255, 255, 255, 0.08);
+
+}
+.skillbar .skillbarProgress{
+    width: 0%;
+    opacity: 0;
+    height: 100%;
+    background-color: rgb(0, 255, 170);
+    position: relative;
+    transition: all .5s;
+}
+.skillbarProgress span{
+    position: absolute;
+    top: -35%;
+    right: 0;
+    color: #0f171e;
+    font-weight: bold;
+}
+@keyframes progress{
+    100%{
+        transform: scaleX(1);
+    }
+}
+
+.nav{
+    width: 35px;
+    height: 6px;
+    background: rgb(0, 255, 170);
+    margin-bottom: 6px;
+    z-index: 20;
+    position: relative;
+    /* display: none; */
+}
+.menu{
+    /* border: 2px solid; */
+    /* display: inline-block; */
+    display: none;
+    position: absolute;
+    right: 6%;
+    top: 33%;
+}
+.mobileMenuBg{
+    /* background: #1b2430; */
+    background: #1b2430;
+    width: 250px;
+    /* height: 400px; */
+    height: 0;
+    z-index: 1;
+    position: absolute;
+    right: 0%;
+    top: 100%;
+    /* visibility: hidden; */
+    transition: ease 0.3s ;
+}
+.showBg{
+    height: 400px;
+    /* visibility: visible; */
+}
+.menu:hover{
+    cursor: pointer;
+}
+.topnavLinksMobile{
+    /* border: 2px solid red; */
+    position: relative;
+    right: -28%;
+    top: 18%;
+    visibility: hidden;
+    /* margin-top: 5%; */
+    /* margin-left: 40%; */
+    z-index: 2;
+    /* transition: ease 0.01s; */
+}
+.showLinks{
+    visibility: visible;
+}
+.topnavLinksMobile a{
+    color: rgb(139, 139, 139);
+    text-decoration: none;
+    font-size: 2rem;
+    /* margin-left: 25px; */
+    position: relative;
+}
+.topnavLinksMobile a::after{
+    content: "";
+    position: absolute;
+    background-color: rgb(0, 255, 170);
+    height: 2px;
+    width: 0%;
+    left: 1px;
+    bottom: -6px;
+    transition: width 0.5s;  
+}
+.topnavLinksMobile a:hover{
+    color: white; 
+}
+.topnavLinksMobile a:hover::after{
+    width: 100%;  
+}
+footer{
+    text-align: center;
+    background: rgb(0, 255, 170);
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+footer a{
+    font-size: 1.8rem;
+    color: #0f171e;
+    font-weight: bold;
+    text-decoration: none;
+    
+}
+
+@media(max-width: 800px){
+    .menu{
+        display: inline-block;
+    }
+    .topnavLinks{
+        display: none;
+    }
+    .maindivTextboxInner{
+        display: block;
+    }
+    #resume{
+        display: none;
+    }
+    .maindivTextboxRight{
+        padding-top: 80px;
+    }
+    .educationText{
+        justify-content: center;
+    }
+    .skillsText{
+        display: block;
+    }
+    footer{
+        display: flex;
+    }
+    .maindivTextboxImage {
+        background-position: initial;
+    }
+}
+@media(max-width: 450px){
+    section{
+        width: 100%;
+    }
+    .topnav h1{
+        font-size: 1.7rem;
+    }
+    .topnav{
+        padding-left: 20px;
+    }
+    .subtext{
+        display: block;
+    }
+    #heading1{
+        font-size: 1.4rem;
+    }
+    .topnav h1{
+        font-size: 1.5rem;
+    }
+    .topnav{
+        padding-left: 20px;
+        padding-bottom: 25px;
+        padding-top: 25px;
+    }
+    .nav{
+        width: 25px;
+        height: 3px;
+    }
+    .mobileMenuBg{
+        width: 170px;
+    }
+    .topnavLinksMobile a{
+        font-size: 1.3rem;
+    }
+    .showBg{
+        height: 250px;
+    }
+    .maindivTextbox h3{
+        font-size: 1.1rem;
+    }
+    .maindivTextboxInner{
+        font-size: 1rem;
+    }
+    .heading2{
+        font-size: 1.5rem;
+    }
+    .maindivTextboxRight{
+        padding-top: 40px;
+    }
+    .interestText{
+        justify-content: center;
+    }
+    footer{
+        height: 80px;
+    }
+    footer a{
+        font-size: 1.6rem;
+    }
+}

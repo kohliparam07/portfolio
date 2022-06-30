@@ -1,0 +1,343 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: url("images/landing2.webp");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Baloo Bhai 2', cursive;
+    color: white;
+}
+.topnav{
+    /* background: rgb(3, 7, 8); */
+    background: #1b2430;
+    color: white;
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    padding-left: 80px;
+    position: fixed;
+    z-index: 100;
+}
+.topnav h1{
+    display: inline;
+    font-weight: bold;
+    font-size: 2.7rem;
+}
+.topnavLinks a{
+    color: rgb(139, 139, 139);
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-left: 25px;
+    position: relative;
+}
+.topnavLinks a::after{
+    content: "";
+    position: absolute;
+    background-color: rgb(0, 255, 170);
+    height: 2px;
+    width: 0%;
+    left: 1px;
+    bottom: -3px;
+    transition: width 0.5s;  
+}
+.topnavLinks a:hover{
+    color: white; 
+}
+.topnavLinks .isactive{
+    color: white;
+    border-bottom: 2px solid rgb(0, 255, 170);
+}
+.topnavLinksMobile .isactive{
+    color: white;
+    /* border-bottom: 2px solid rgb(0, 255, 170); */
+}
+.topnavLinks a:hover::after{
+    width: 100%;  
+}
+.topnavLinks{
+    float: right;
+    /* border: 2px solid; */
+    display: inline;
+    position: absolute;
+    top: 28%;
+    right: 6%;
+}
+section{
+    /* background: rgb(3, 7, 8); */
+    background: #0f171e;
+    width: 90%;
+    /* height: 800px; */
+    margin: auto;
+    margin-bottom: 50px;
+    /* position: relative; */
+    /* top: 25%;  */  
+}
+.maindiv{
+    font-size: 1.25rem;
+    padding: 30px;
+}
+.underline{
+    background: rgb(0, 255, 170);
+    width: 90px;
+    height: 2px;
+    display: inline-block;
+    margin-bottom: 7px;
+}
+#heading1{
+    font-size: 2.6rem;
+}
+.maindiv h3{
+    color: rgb(139, 139, 139);
+}
+.contactText{
+    /* border: 2px solid; */
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 40px;
+}
+.contactCard{
+    /* border: 1px solid yellow; */
+    background: rgba(255,255,255,0.08);
+    height: 125px;
+    display: flex;
+}
+.contactCardIcon{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+    margin-left: 20px;
+}
+.contactCardInner{
+    /* border: 2px solid; */
+    margin-left: 20px;
+    margin-top: 10px;
+}
+#socialBox span a i{
+    margin-right: 8px;
+    color: white;
+}
+#socialBox span a i:hover{
+    cursor: pointer;
+    color: rgb(0, 255, 170);
+}
+.cont{
+    font-size: 1.4rem;
+    margin: auto;
+    color: rgb(0, 255, 170);
+}
+.contactForm{
+    background: rgba(255,255,255,0.08);
+    margin-top: 40px;
+    /* height: 500px; */
+    padding: 50px;
+}
+.contactFormInput{
+    background: rgba(255,255,255,0.1);
+    border: none;
+    padding: 15px;
+    color: white;
+    font-size: 1rem;
+}
+#text, #email{
+    /* width: 100%; */
+    height: 50px;
+}
+#subject{
+    height: 50px;
+}
+#subject, #message, #subBtn{
+    grid-column: span 2;
+}
+.subBox, .msgBox, #subBtn{
+    grid-column: span 2;
+}
+form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    /* border: 2px solid; */
+}
+#subBtn{
+    background: rgb(0, 255, 170);
+    border: none;
+    height: 50px;
+    width: 200px;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: inline-block;
+    margin: auto;
+}
+#subBtn:hover{
+    cursor: pointer;
+    background: rgb(0, 192, 128);
+}
+.mailBox, .subBox, .msgBox, .nameBox{
+    /* border: 2px solid; */
+    display: grid;
+}
+.err{
+    color: red;
+    visibility: hidden;
+}
+
+.nav{
+    width: 35px;
+    height: 6px;
+    background: rgb(0, 255, 170);
+    margin-bottom: 6px;
+    z-index: 20;
+    position: relative;
+    /* display: none; */
+}
+.menu{
+    /* border: 2px solid; */
+    display: none;
+    position: absolute;
+    right: 6%;
+    top: 33%;
+}
+.mobileMenuBg{
+    /* background: #1b2430; */
+    background: #1b2430;
+    width: 250px;
+    /* height: 400px; */
+    height: 0;
+    z-index: 1;
+    position: absolute;
+    right: 0%;
+    top: 100%;
+    /* visibility: hidden; */
+    transition: ease 0.3s ;
+}
+.showBg{
+    height: 400px;
+    /* visibility: visible; */
+}
+.menu:hover{
+    cursor: pointer;
+}
+.topnavLinksMobile{
+    /* border: 2px solid red; */
+    position: relative;
+    right: -28%;
+    top: 18%;
+    visibility: hidden;
+    /* margin-top: 5%; */
+    /* margin-left: 40%; */
+    z-index: 2;
+    /* transition: ease 0.01s; */
+}
+.showLinks{
+    visibility: visible;
+}
+.topnavLinksMobile a{
+    color: rgb(139, 139, 139);
+    text-decoration: none;
+    font-size: 2rem;
+    /* margin-left: 25px; */
+    position: relative;
+}
+.topnavLinksMobile a::after{
+    content: "";
+    position: absolute;
+    background-color: rgb(0, 255, 170);
+    height: 2px;
+    width: 0%;
+    left: 1px;
+    bottom: -6px;
+    transition: width 0.5s;  
+}
+.topnavLinksMobile a:hover{
+    color: white; 
+}
+.topnavLinksMobile a:hover::after{
+    width: 100%;  
+}
+@media(max-width: 800px){
+    .menu{
+        display: inline-block;
+    }
+    .topnavLinks{
+        display: none;
+    }
+    .contactText{
+        display: block;
+    }
+}
+
+@media(max-width: 450px){
+    section{
+        width: 100%;
+    }
+    .topnav h1{
+        font-size: 1.7rem;
+    }
+    .topnav{
+        padding-left: 20px;
+    }
+    .subtext{
+        display: block;
+    }
+    #heading1{
+        font-size: 1.4rem;
+    }
+    .topnav h1{
+        font-size: 1.5rem;
+    }
+    .topnav{
+        padding-left: 20px;
+        padding-bottom: 25px;
+        padding-top: 25px;
+    }
+    .nav{
+        width: 25px;
+        height: 3px;
+    }
+    .mobileMenuBg{
+        width: 170px;
+    }
+    .topnavLinksMobile a{
+        font-size: 1.3rem;
+    }
+    .showBg{
+        height: 250px;
+    }
+    .contactCard{
+        display: block;
+        padding-bottom: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        height: 100%;
+    }
+    .heading2{
+        font-size: 1.5rem;
+    }
+    .contactCardInner{
+        margin: 0;
+    }
+    .contactCardIcon{
+        margin-left: -20px;
+        border-radius: 0%;
+    }
+    .contactForm{
+        padding: 20px;
+    }
+    form{
+        display: block;
+    }
+    .err span{
+        font-size: 1rem;
+    }
+}
